@@ -1,7 +1,33 @@
 html {
     box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    color: antiquewhite;
+}
+body {
+    background-image: radial-gradient(rgb(67, 1, 67), rgb(32, 1, 35));
+
 }
 
-*, *::before, *::after{
+*, *:before, *:after{
     box-sizing: inherit;
+}
+  
+.container-fluid {
+display: flex;
+justify-content: space-between;
+align-items: center; 
+}
+
+.nav-manual {
+display: flex;
+justify-content: center; 
+}
+
+.menu-text {
+    color: white;
+}
+
+.brand-text {
+    color: white;
 }
