@@ -12,6 +12,12 @@ body {
 *, *:before, *:after{
     box-sizing: inherit;
 }
+
+section {
+    text-align: center;
+    height: 100vh;
+    color: white;
+}
   
 .container-fluid {
 display: flex;
