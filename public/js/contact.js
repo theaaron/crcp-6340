@@ -23,7 +23,6 @@
     });
     
     
-    
     function sendEmail() {
         let name = document.querySelector('#name').value;
         let mail = document.querySelector('#mail').value;
