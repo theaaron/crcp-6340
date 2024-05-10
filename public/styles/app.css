@@ -1,0 +1,65 @@
+html {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    color: antiquewhite;
+}
+body {
+    background-image: radial-gradient(rgb(67, 1, 67), rgb(32, 1, 35));
+
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+section {
+    text-align: center;
+    height: 100vh;
+    color: white;
+}
+
+#projs {
+    text-align: center;
+}
+
+.projs-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projs-imgs img {
+    width: 30%;
+    margin: 10px;
+    height: auto;
+    object-fit: cover;
+}
+  
+.container-fluid {
+display: flex;
+justify-content: space-between;
+align-items: center; 
+}
+
+.nav-manual {
+display: flex;
+justify-content: center; 
+}
+
+.menu-text {
+    color: white;
+}
+
+.brand-text {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .projs-imgs img {
+        width: 50vw;
+        /* max-height: 30vh; */
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+}
