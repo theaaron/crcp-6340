@@ -18,6 +18,23 @@ section {
     height: 100vh;
     color: white;
 }
+
+#projs {
+    text-align: center;
+}
+
+.projs-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projs-imgs img {
+    width: 30%;
+    margin: 10px;
+    height: auto;
+    object-fit: cover;
+}
   
 .container-fluid {
 display: flex;
@@ -36,4 +53,13 @@ justify-content: center;
 
 .brand-text {
     color: white;
+}
+
+@media (max-width: 768px) {
+    .projs-imgs img {
+        width: 50vw;
+        /* max-height: 30vh; */
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
 }

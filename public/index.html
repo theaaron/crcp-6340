@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="./styles/app.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand nav-brand-manual brand-text" href="#">Aa</a>
+        <a class="navbar-brand nav-brand-manual brand-text" href="#hero">Aa</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -32,18 +32,20 @@
         >
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link menu-text" aria-current="page" href="#"
+              <a class="nav-link menu-text" aria-current="page" href="#hero"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link menu-text" href="#">Featured Project</a>
+              <a class="nav-link menu-text" href="#feat-proj"
+                >Featured Project</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link menu-text" href="#">Projects</a>
+              <a class="nav-link menu-text" href="#projs">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link menu-text" href="#">Contact</a>
+              <a class="nav-link menu-text" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -70,10 +72,21 @@
       id="projs"
       class="d-flex flex-column justify-content-center align-items-center"
     >
-      <h1>Projects</h1>
-      <img src="" alt="" />
-      <img src="" alt="" />
-      <img src="" alt="" />
+      <div class="projs-imgs">
+        <img src="./images/heize.png" alt="heize audio visualizer" />
+        <img src="./images/mandala.png" alt="mandala" />
+        <img
+          src="./images/threedeeproj.png"
+          alt="three dimensional panels rotating"
+        />
+      </div>
+    </section>
+
+    <section
+      id="contact"
+      class="d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1>Contact</h1>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
