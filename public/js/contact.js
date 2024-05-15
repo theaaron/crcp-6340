@@ -4,8 +4,6 @@
     const form = document.querySelector('#contact-form');
     let contactFormBtn = document.querySelector('#contactFormBtn');
 
-
-
     contactFormBtn.addEventListener('click', (event) => {
         event.preventDefault();
         event.stopPropagation();
@@ -21,7 +19,6 @@
         }
         
     });
-    
     
     function sendEmail() {
         let name = document.querySelector('#name').value;
