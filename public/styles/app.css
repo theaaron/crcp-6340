@@ -14,10 +14,15 @@ body {
 }
 
 
+
 section {
     /* text-align: center; */
-    height: 100vh;
+    height: 80vh;
     color: white;
+}
+
+#cap-a {
+    font-weight: 700;
 }
 
 #projs {
@@ -28,28 +33,35 @@ section {
     background-color: aqua;
 }
 
-#animated-a {
-    display: inline-block;
-    animation: stretch 1s ease-in-out infinite alternate; /* CSS Animation */
-  }
-  
-  @keyframes stretch { /* Define the animation keyframes */
-    0% { width: 100%; }
-    100% { width: 120%; } /* Adjust the percentage as needed */
-  }
+#hero-title {
+    padding: 300px 200px;
+    background-color: blue;
+    border-radius: 15px;
+}
+
 
 .space-grotesk-brand {
     font-family: "Space Grotesk", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 100;
+    font-weight: 600;
     font-style: normal;
   }
 
 .space-grotesk-nav {
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 200;
+  font-weight: 500;
   font-style: normal;
+}
+
+span.stretch {
+    display:inline-block;
+    -webkit-transform:scale(4,1); /* Safari and Chrome */
+    -moz-transform:scale(4,1); /* Firefox */
+    -ms-transform:scale(4,1); /* IE 9 */
+    -o-transform:scale(4,1); /* Opera */
+    transform:scale(4,1); /* W3C */
+    padding: 0 10px;
 }
 
 .navlinks {
