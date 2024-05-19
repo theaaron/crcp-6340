@@ -4,8 +4,8 @@ html {
     height: 100%;
 }
 body {
-    background-image: radial-gradient(rgb(67, 1, 67), rgb(32, 1, 35));
-    color: antiquewhite;
+    background-color: #111;
+    color: white;
 
 }
 
@@ -13,14 +13,53 @@ body {
     box-sizing: inherit;
 }
 
+
 section {
-    text-align: center;
+    /* text-align: center; */
     height: 100vh;
     color: white;
 }
 
 #projs {
     text-align: center;
+}
+
+#connect-wallet-button {
+    background-color: aqua;
+}
+
+#animated-a {
+    display: inline-block;
+    animation: stretch 1s ease-in-out infinite alternate; /* CSS Animation */
+  }
+  
+  @keyframes stretch { /* Define the animation keyframes */
+    0% { width: 100%; }
+    100% { width: 120%; } /* Adjust the percentage as needed */
+  }
+
+.space-grotesk-brand {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+.space-grotesk-nav {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.navlinks {
+    color: white;
+}
+
+.navlinks:hover {
+    color: black;
+    background-color: white;
+
 }
 
 .projs-imgs {
@@ -34,6 +73,7 @@ section {
     margin: 10px;
     height: auto;
     object-fit: cover;
+    border-radius: 15px;
 }
   
 .container-fluid {
@@ -44,7 +84,7 @@ align-items: center;
 
 .nav-manual {
 display: flex;
-justify-content: center; 
+justify-content: right; 
 }
 
 .menu-text {
