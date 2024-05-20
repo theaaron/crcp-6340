@@ -25,17 +25,33 @@ section {
     font-weight: 700;
 }
 
+#brand:hover {
+    color: white;
+}
+
 #projs {
     text-align: center;
 }
 
 #connect-wallet-button {
-    background-color: aqua;
+    position: relative;
+    background-color: white;
+    color: black;
+    border: 2 solid transparent;
+    border-radius: 15px;
+    padding-left:  20px;
+    padding-right:  20px;
+    margin-left: 5px;
+}
+
+#connect-wallet-button:hover {
+    background: repeating-linear-gradient(-6deg, rgb(108, 0, 118), rgb(41, 0, 88) 10%);
+    color: white;
 }
 
 #hero-title {
-    padding: 300px 200px;
-    background-color: blue;
+    padding: 100px 150px;
+    background: repeating-linear-gradient(-6deg, rgb(108, 0, 118), rgb(41, 0, 88) 1%);
     border-radius: 15px;
 }
 
@@ -46,6 +62,8 @@ section {
     font-weight: 600;
     font-style: normal;
   }
+
+
 
 .space-grotesk-nav {
   font-family: "Space Grotesk", sans-serif;
@@ -66,6 +84,8 @@ span.stretch {
 
 .navlinks {
     color: white;
+    border-radius: 15px;
+    margin-right: 3px;
 }
 
 .navlinks:hover {
