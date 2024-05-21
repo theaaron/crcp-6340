@@ -123,7 +123,7 @@
         />
       </div>
       <div>
-        <a id="all-projs-btn" href="projects.html">ALL PROJECTS -></a>
+        <a id="all-projs-btn" href="projects.html">ALL PROJECTS =></a>
       </div>
     </section>
 
@@ -133,15 +133,37 @@
     >
       <div class="container">
         <div class="row">
-          <div class="col justify-content-center">
+          <div class="col d-flex justify-content-right">
             <video autoplay muted loop id="about-me-vid">
               <source src="images/self.mp4" />
             </video>
           </div>
-          <div class="col">Beans</div>
+          <div class="col d-flex justify-content-left">
+            <div class="container d-flex flex-column h-100">
+              <div class="row flex-fill">
+                <div class="col-4 bento-grid-item">ABOUT ME</div>
+                <div class="col-8 bento-grid-item">
+                  creative tech @ <span id="smu-text">smu</span>
+                </div>
+              </div>
+              <div class="row flex-fill">
+                <div class="col-4 bento-grid-item">Mobile Dev</div>
+                <div class="col-4 bento-grid-item">Web Dev</div>
+                <div class="col-4 bento-grid-item">Creative Dev</div>
+              </div>
+              <div class="row flex-fill">
+                <div class="col-8 bento-grid-item">
+                  comp sci @ <span id="ga-tech-text">ga tech</span>
+                </div>
+                <div class="col-4 bento-grid-item">Blockchain</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <footer></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="./js/index.js"></script>

@@ -143,6 +143,14 @@ justify-content: right;
     color: white;
 }
 
+.bento-grid-item {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 768px) {
     .projs-imgs img {
         width: 50vw;
