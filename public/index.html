@@ -111,51 +111,59 @@
     </section>
 
     <section
-      id="projs"
-      class="d-flex flex-column justify-content-center align-items-center"
+      id="projs-section"
+      class="justify-content-center align-items-center"
     >
-      <div class="projs-imgs">
-        <img src="./images/heize.png" alt="heize audio visualizer" />
-        <img src="./images/mandala.png" alt="mandala" />
-        <img
-          src="./images/threedeeproj.png"
-          alt="three dimensional panels rotating"
-        />
-      </div>
-      <div>
-        <a id="all-projs-btn" href="projects.html">ALL PROJECTS =></a>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-md-12">
+            <img
+              class="projs-imgs"
+              src="./images/heize.png"
+              alt="heize audio visualizer"
+            />
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <img class="projs-imgs" src="./images/mandala.png" alt="mandala" />
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <img
+              class="projs-imgs"
+              src="./images/threedeeproj.png "
+              alt="three dimensional panels rotating"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <a id="all-projs-btn" href="projects.html">ALL PROJECTS =></a>
+        </div>
       </div>
     </section>
 
-    <section
-      id="about-me"
-      class="d-flex flex-column justify-content-center align-items-center"
-    >
-      <div class="container">
+    <section id="about-me" class="justify-content-center align-items-center">
+      <div class="container-fluid" id="about-me">
         <div class="row">
-          <div class="col d-flex justify-content-right">
+          <div class="col-lg-6 col-md-12">
             <video autoplay muted loop id="about-me-vid">
               <source src="images/self.mp4" />
             </video>
           </div>
-          <div class="col d-flex justify-content-left">
-            <div class="container d-flex flex-column h-100">
-              <div class="row flex-fill">
-                <div class="col-4 bento-grid-item">ABOUT ME</div>
-                <div class="col-8 bento-grid-item">
-                  creative tech @ <span id="smu-text">smu</span>
-                </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="container">
+              <div class="row">
+                <h1 class="col">About Me</h1>
               </div>
-              <div class="row flex-fill">
-                <div class="col-4 bento-grid-item">Mobile Dev</div>
-                <div class="col-4 bento-grid-item">Web Dev</div>
-                <div class="col-4 bento-grid-item">Creative Dev</div>
-              </div>
-              <div class="row flex-fill">
-                <div class="col-8 bento-grid-item">
-                  comp sci @ <span id="ga-tech-text">ga tech</span>
-                </div>
-                <div class="col-4 bento-grid-item">Blockchain</div>
+              <div class="row">
+                <p class="col">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
               </div>
             </div>
           </div>
