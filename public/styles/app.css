@@ -19,6 +19,14 @@ section {
     height: 80vh;
 }
 
+form {
+    width: 100%;
+}
+
+i  {
+    color: white;
+}
+
 #cap-a {
     font-weight: 700;
 }
@@ -50,6 +58,10 @@ section {
     border-radius: 15px;
 }
 
+#feat-proj {
+    text-align: center;
+}
+
 #projs-section {
     text-align: center;
     justify-content: center;
@@ -77,6 +89,8 @@ section {
     margin: 0 auto;
     border-radius: 15px;
 }
+
+
 
 .space-grotesk-brand {
     font-family: "Space Grotesk", sans-serif;
@@ -146,6 +160,16 @@ justify-content: right;
     color: white;
 }
 
+.social-icon {
+    color: #333;
+    margin-left: 15px; 
+    font-size: 1.2em; 
+    transition: color 0.3s ease; 
+  }
+  .social-icon:hover {
+    color: #007bff; 
+  }
+
 @media (max-width: 992px) {
     .projs-imgs {
         width: 70vw;
@@ -162,6 +186,7 @@ justify-content: right;
         height: auto;
         min-height: 80vh;
     }
+
     #all-projs-btn {
         width: 70vw;
         margin: 20px auto;
@@ -186,5 +211,9 @@ justify-content: right;
       .container { /* Target the Bootstrap container within #about-me */
         width: auto;  /* Allow the container to shrink */
         max-width: 100%; /* Ensure it doesn't go beyond its parent */
+      }
+      
+      #contact-form-container {
+        width: 75vw;
       }
 }
