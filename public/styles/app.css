@@ -23,6 +23,7 @@ form {
     width: 100%;
 }
 
+
 i  {
     color: white;
 }
@@ -67,6 +68,7 @@ i  {
 }
 
 #projs-section {
+    height: 90vh;
     text-align: center;
     justify-content: center;
     width: 80vw;
@@ -92,6 +94,23 @@ i  {
     text-align: center;
     margin: 0 auto;
     border-radius: 15px;
+}
+
+#about-contact-button {
+    padding: 10px 80px;
+    margin-top: 30px;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.space-grotesk {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .section-title {
@@ -144,6 +163,8 @@ span.stretch {
     background-color: white;
 
 }
+
+
 
 .feat-img {
     width: 100%;
@@ -213,7 +234,7 @@ justify-content: right;
         margin: 20px auto;
     }
     .row {
-        justify-content: center; /* Horizontally center items within the row */
+        justify-content: center; 
       }
       [class*="col-"] { /* Target any element with a Bootstrap column class */
         margin: 0 auto;  /* Center the column itself */
