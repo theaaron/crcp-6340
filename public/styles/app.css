@@ -16,7 +16,7 @@ body {
 
 section {
     /* text-align: center; */
-    height: 80vh;
+    min-height: 80vh;
 }
 
 form {
@@ -25,6 +25,10 @@ form {
 
 i  {
     color: white;
+}
+
+#hero {
+    height: 100vh;
 }
 
 #cap-a {
@@ -90,7 +94,9 @@ i  {
     border-radius: 15px;
 }
 
-
+.section-title {
+    margin-bottom: 50px;
+}
 
 .space-grotesk-brand {
     font-family: "Space Grotesk", sans-serif;
@@ -137,6 +143,21 @@ span.stretch {
     color: black;
     background-color: white;
 
+}
+
+.feat-img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.proj-button {
+    padding: 10px 80px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 15px;
 }
 
 .projs-imgs {

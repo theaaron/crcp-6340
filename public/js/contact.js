@@ -43,7 +43,7 @@
         })
         .then(() => {
             setTimeout(() => {
-                document.querySelector("#contactFormBtn").innerHTML = "oopsie";
+                document.querySelector("#contactFormBtn").innerHTML = "Submit";
             }, "5000")
         })
 
