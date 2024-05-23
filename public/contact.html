@@ -92,10 +92,10 @@
         id="contact-form"
         novalidate
       >
-        <h1 class="text-center mb-4">Contact Me</h1>
+        <h1 class="text-center mb-4 space-grotesk-nav">Contact Me</h1>
 
         <div class="mb-3">
-          <label for="name" class="form-label">Name:</label>
+          <label for="name" class="form-label space-grotesk">Name:</label>
           <input
             type="text"
             class="form-control"
@@ -103,11 +103,13 @@
             name="user_name"
             required
           />
-          <div class="invalid-feedback">Please enter your name.</div>
+          <div class="invalid-feedback space-grotesk">
+            Please enter your name.
+          </div>
         </div>
 
         <div class="mb-3">
-          <label for="mail" class="form-label">Email:</label>
+          <label for="mail" class="form-label space-grotesk">Email:</label>
 
           <input
             type="email"
@@ -122,7 +124,7 @@
         </div>
 
         <div class="mb-3">
-          <label for="msg" class="form-label">Message:</label>
+          <label for="msg" class="form-label space-grotesk">Message:</label>
           <textarea
             class="form-control"
             id="msg"
@@ -133,9 +135,14 @@
           <div class="invalid-feedback">Please enter your message.</div>
         </div>
 
-        <button id="contactFormBtn" type="submit" class="btn btn-primary">
+        <button
+          id="contactFormBtn"
+          type="submit"
+          class="btn btn-primary space-grotesk"
+        >
           Send Message
         </button>
+        <span class="space-grotesk" id="success-button"></span>
       </form>
     </div>
 

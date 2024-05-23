@@ -68,7 +68,7 @@ i  {
 }
 
 #projs-section {
-    height: 90vh;
+    min-height: 90vh;
     text-align: center;
     justify-content: center;
     width: 80vw;

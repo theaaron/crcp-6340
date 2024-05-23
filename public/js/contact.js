@@ -3,6 +3,7 @@
 
     const form = document.querySelector('#contact-form');
     let contactFormBtn = document.querySelector('#contactFormBtn');
+    let successButton = document.querySelector('#success-button');
 
     contactFormBtn.addEventListener('click', (event) => {
         event.preventDefault();
@@ -39,11 +40,11 @@
         })
         .then((r) => r.json())
         .then((response) => {
-            document.querySelector("#contactFormBtn").innerHTML = response.result;
+            successButton.innerHTML = response.result;
         })
         .then(() => {
             setTimeout(() => {
-                document.querySelector("#contactFormBtn").innerHTML = "Submit";
+                document.querySelector("#success-button").innerHTML = "";
             }, "5000")
         })
 
