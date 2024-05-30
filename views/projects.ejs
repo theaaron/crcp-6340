@@ -31,8 +31,19 @@
   </head>
   <body>
     <header><%- include ('header'); %></header>
-    <div class="vh-100"></div>
-    <header><%- include ('footer'); %></header>
+    <div
+      class="vh-100 d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1>Projects</h1>
+      <% projectArray.forEach( (item, index) => { %>
+      <div>
+        <h1>
+          <a href="/project/<%= index + 1 %>"> <%= item %> </a>
+        </h1>
+      </div>
+      <% }); %>
+    </div>
+    <footer><%- include ('footer'); %></footer>
 
     <script type="module" src="./js/index.js"></script>
   </body>
