@@ -1,21 +1,30 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import * as utils from './utils/utils.js';
+import * as db from './utils/database.js';
 
 dotenv.config();
 
 const data = ['proj 1', 'proj 2', 'proj 3'];
+let projects = [];
+
 const app = express();
 const port = 3000;
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-    res.render("index.ejs");
+app.get("/", async (req, res) => {
+    await db.connect()
+    .then(async() => {
+        projects = await db.getAllProjects();
+        console.log(projects);
+        res.render("index.ejs");
+    })
 });
+
 app.get("/projects", (req, res) => {
-    res.render("projects.ejs", {projectArray: data});
+        res.render("projects.ejs", {projectArray: projects});
 });
 
 app.get("/project/:id", (req, res) => {
