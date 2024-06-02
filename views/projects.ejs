@@ -37,9 +37,11 @@
       <h1>Projects</h1>
       <% projectArray.forEach( (item, index) => { %>
       <div>
-        <h1>
-          <a href="/project/<%= index + 1 %>"> <%= item %> </a>
-        </h1>
+        <%- include('projectCard', {ident: item.id, image: item.image_url, name:
+        item.project_name}); %>
+        <!-- <h1>
+          <a href="/project/<%= index + 1 %>"> <%= item.project_name %> </a>
+        </h1> -->
       </div>
       <% }); %>
     </div>
