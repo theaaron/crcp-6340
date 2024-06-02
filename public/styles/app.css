@@ -106,6 +106,10 @@ i  {
     text-align: center;
 }
 
+#contact-form-container {
+    min-height: 95vh;
+  }
+
 .space-grotesk {
     font-family: "Space Grotesk", sans-serif;
     font-optical-sizing: auto;
@@ -257,5 +261,6 @@ justify-content: right;
       
       #contact-form-container {
         width: 75vw;
+        min-height: 90vh;
       }
 }

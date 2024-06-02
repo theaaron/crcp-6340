@@ -4,15 +4,31 @@ import * as utils from './utils/utils.js';
 
 dotenv.config();
 
+const data = ['proj 1', 'proj 2', 'proj 3'];
 const app = express();
 const port = 3000;
-
+app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.static("public"));
 
-// app.get("/", (req, res) => {
-//     res.send("Hello World");
-// });
+app.get("/", (req, res) => {
+    res.render("index.ejs");
+});
+app.get("/projects", (req, res) => {
+    res.render("projects.ejs", {projectArray: data});
+});
+
+app.get("/project/:id", (req, res) => {
+    let id = req.params.id;
+    if (id > data.length) {
+        throw new Error("No project with that ID")
+    }
+    res.render("project.ejs", {projectArray: data, which: id});
+
+});
+app.get("/contact", (req, res) => {
+    res.render("contact.ejs");
+});
 
 app.post("/mail", async (req, res) => {
     await utils
