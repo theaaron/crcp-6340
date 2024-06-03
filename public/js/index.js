@@ -1,9 +1,9 @@
 (() => {
     "use strict";
     let userAddress = null;
-    let connect = document.querySelector('#about-contact-button');
+    let connect = document.querySelector('#connect-wallet-button');
 
-    connect.addEventListener('click', connectWallet());
+    connect.addEventListener('click', connectWallet);
 
     async function connectWallet() {
         await window.ethereum
@@ -35,6 +35,8 @@
     }
 
     rotateHeroBg();
+
+
 
     
 })();

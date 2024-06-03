@@ -7,6 +7,7 @@ dotenv.config();
 
 const data = ['proj 1', 'proj 2', 'proj 3'];
 let projects = [];
+let personalProjs = [];
 
 const app = express();
 const port = 3000;

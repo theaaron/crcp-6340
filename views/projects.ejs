@@ -29,21 +29,21 @@
     />
     <link rel="stylesheet" href="./styles/app.css" />
   </head>
-  <body>
+  <body class="space-grotesk">
     <header><%- include ('header'); %></header>
     <div
-      class="vh-100 d-flex flex-column justify-content-center align-items-center"
+      class="container-fluid projects-splash d-flex flex-column justify-content-center align-items-center"
     >
-      <h1>Projects</h1>
-      <% projectArray.forEach( (item, index) => { %>
-      <div>
-        <%- include('projectCard', {ident: item.id, image: item.image_url, name:
-        item.project_name}); %>
+      <h1 class="mt-5">Projects</h1>
+      <div class="row justify-content-center align-items-center">
+        <% projectArray.forEach( (item, index) => { %> <%-
+        include('projectCard', {ident: item.id, image:
+        item.img_url.replace(/^\.\/public/, "./"), name: item.project_name}); %>
         <!-- <h1>
-          <a href="/project/<%= index + 1 %>"> <%= item.project_name %> </a>
-        </h1> -->
+              <a href="/project/<%= index + 1 %>"> <%= item.project_name %> </a>
+            </h1> -->
+        <% }); %>
       </div>
-      <% }); %>
     </div>
     <footer><%- include ('footer'); %></footer>
 
