@@ -20,7 +20,9 @@ app.get("/", async (req, res) => {
     .then(async() => {
         projects = await db.getAllProjects();
         console.log(projects);
-        res.render("index.ejs", {projectArray: projects});
+        projects.forEach((proj) => {proj.img_url = proj.img_url.replace("/public", "")});
+        let feat = getRandomInt(projects.length);
+        res.render("index.ejs", {projectArray: projects, featProj: feat});
     })
 });
 
@@ -54,3 +56,8 @@ app.post("/mail", async (req, res) => {
 app.listen(port, () => {
     console.log(`App running @ http://localhost:${port}`);
 })
+
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
