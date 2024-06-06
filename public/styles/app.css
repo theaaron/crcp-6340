@@ -128,6 +128,14 @@ i  {
     font-style: normal;
   }
 
+  .space-grotesk-white {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+  }
+
 
 .space-grotesk-nav {
   font-family: "Space Grotesk", sans-serif;
@@ -183,6 +191,17 @@ span.stretch {
     background-color: white;
     text-decoration: none;
     border-radius: 15px;
+}
+
+.card-proj-btn {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
 }
 
 .projs-imgs {
@@ -263,4 +282,10 @@ justify-content: right;
         width: 75vw;
         min-height: 90vh;
       }
+}
+
+
+.projects-splash {
+    min-height: 100vh;
+    width: 80vw;
 }
