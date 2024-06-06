@@ -7,7 +7,7 @@ dotenv.config();
 
 const data = ['proj 1', 'proj 2', 'proj 3'];
 let projects = [];
-let personalProjs = [];
+let projects2 = [];
 
 const app = express();
 const port = 3000;
@@ -20,7 +20,7 @@ app.get("/", async (req, res) => {
     .then(async() => {
         projects = await db.getAllProjects();
         console.log(projects);
-        res.render("index.ejs");
+        res.render("index.ejs", {projectArray: projects});
     })
 });
 

@@ -39,9 +39,6 @@
         <% projectArray.forEach( (item, index) => { %> <%-
         include('projectCard', {ident: item.id, image:
         item.img_url.replace(/^\.\/public/, "./"), name: item.project_name}); %>
-        <!-- <h1>
-              <a href="/project/<%= index + 1 %>"> <%= item.project_name %> </a>
-            </h1> -->
         <% }); %>
       </div>
     </div>

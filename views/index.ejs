@@ -77,23 +77,10 @@
       <div class="container-fluid">
         <h1>Projects</h1>
         <div class="row">
-          <div class="col-lg-4 col-md-12">
-            <img
-              class="projs-imgs"
-              src="./images/heize.png"
-              alt="heize audio visualizer"
-            />
-          </div>
-          <div class="col-lg-4 col-md-12">
-            <img class="projs-imgs" src="./images/mandala.png" alt="mandala" />
-          </div>
-          <div class="col-lg-4 col-md-12">
-            <img
-              class="projs-imgs"
-              src="./images/threedeeproj.png "
-              alt="three dimensional panels rotating"
-            />
-          </div>
+          <% projectArray.forEach( (item, index) => { %> <%-
+          include('indexProjectCard', {imgUrl:
+          item.img_url.replace(/^\.\/public/, "./"), desc: item.description});
+          %> <% }); %>
         </div>
         <div class="row">
           <a id="all-projs-btn" href="/projects">ALL PROJECTS =></a>
