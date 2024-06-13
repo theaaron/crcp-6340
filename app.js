@@ -30,12 +30,20 @@ app.get("/projects", (req, res) => {
         res.render("projects.ejs", {projectArray: projects});
 });
 
-app.get("/project/:id", (req, res) => {
+app.get("/project/:id", async (req, res) => {
     let id = req.params.id;
     if (id > data.length) {
         throw new Error("No project with that ID")
     }
-    res.render("project.ejs", {projectArray: data, which: id});
+    await db.connect()
+    .then(async() => {
+        projects = await db.getAllProjects();
+        console.log(projects);
+        projects.forEach((proj) => {proj.img_url = proj.img_url.replace("/public", "")});
+        let feat = getRandomInt(projects.length);
+        res.render("project.ejs", {projectArray: projects, which: id});
+    })
+    
 
 });
 app.get("/contact", (req, res) => {
