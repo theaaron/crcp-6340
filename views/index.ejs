@@ -40,46 +40,10 @@
       <h1 id="hero-title">AARON'S NFT MINT</h1>
     </section>
 
-    <section
-      id="feat-proj"
-      class="d-flex flex-column justify-content-center align-items-center"
-    >
-      <div class="container-fluid" id="about-me">
-        <h1 class="section-title">Featured</h1>
-        <div class="row">
-          <div class="col-lg-6 col-md-12">
-            <img
-              class="feat-img"
-              src=" <%=
-            projectArray[featProj].img_url %> "
-              alt="string-like
-            lines moving in a wave against a blue background"
-            />
-          </div>
-          <div
-            class="col-lg-6 col-md-12 d-flex align-items-center flex-column justify-content-center mt-5 mb-5"
-          >
-            <div class="justify-content-center align-items-center">
-              <h1><%= projectArray[featProj].project_name %></h1>
-              <h5><span id="num-minted">x</span>/10 Minted</h5>
-              <h5><%= projectArray[featProj].project_description %></h5>
-              <h5>
-                Cost:
-                <span id="num-minted">
-                  <%= projectArray[featProj].price_eth %>
-                </span>
-                Ξ
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <a href="/project/<%= featProj+1 %>" class="proj-button"
-            >MINT THIS PROJECT =></a
-          >
-        </div>
-      </div>
-    </section>
+    <%- include('selectedProjView', {name: projectArray[featProj].project_name,
+    imgUrl: projectArray[featProj].img_url, price:
+    projectArray[featProj].price_eth, desc:
+    projectArray[featProj].description}); %>
 
     <section
       id="projs-section"
