@@ -48,8 +48,10 @@
     <div
       class="vh-100 d-flex flex-column justify-content-center align-items-center"
     >
-      <!-- <h1>Project page for <%= which %></h1> -->
-      <h2><%= projectArray[which-1].project_name %></h2>
+      <%- include('selectedProjView', {name: projectArray[which-1].project_name,
+      imgUrl: "." + projectArray[which-1].img_url, price:
+      projectArray[which-1].price_eth, featProj: which, desc:
+      projectArray[which-1].description}); %>
     </div>
     <%- include ('footer'); %>
 

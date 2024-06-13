@@ -40,10 +40,9 @@
       <h1 id="hero-title">AARON'S NFT MINT</h1>
     </section>
 
-    <%- include('selectedProjView', {name: projectArray[featProj].project_name,
-    imgUrl: projectArray[featProj].img_url, price:
-    projectArray[featProj].price_eth, desc:
-    projectArray[featProj].description}); %>
+    <%- include('featProj', {name: projectArray[featProj].project_name, imgUrl:
+    projectArray[featProj].img_url, price: projectArray[featProj].price_eth,
+    desc: projectArray[featProj].description}); %>
 
     <section
       id="projs-section"
