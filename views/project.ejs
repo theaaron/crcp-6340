@@ -49,7 +49,7 @@
       class="vh-100 d-flex flex-column justify-content-center align-items-center"
     >
       <%- include('selectedProjView', {name: projectArray[which-1].project_name,
-      imgUrl: "." + projectArray[which-1].img_url, price:
+      imgUrl: projectArray[which-1].img_url, price:
       projectArray[which-1].price_eth, featProj: which, desc:
       projectArray[which-1].description}); %>
     </div>
