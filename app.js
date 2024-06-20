@@ -7,7 +7,6 @@ dotenv.config();
 
 const data = ["proj 1", "proj 2", "proj 3"];
 let projects = [];
-let projects2 = [];
 
 const app = express();
 const port = 3000;
@@ -18,10 +17,6 @@ app.use(express.static("public"));
 app.get("/", async (req, res) => {
   await db.connect().then(async () => {
     projects = await db.getAllProjects();
-    console.log(projects);
-    // projects.forEach((proj) => {
-    //   proj.img_url = proj.img_url.replace("/public", "");
-    // });
     let feat = getRandomInt(projects.length);
     res.render("index.ejs", { projectArray: projects, featProj: feat });
   });
@@ -38,10 +33,6 @@ app.get("/project/:id", async (req, res) => {
   }
   await db.connect().then(async () => {
     projects = await db.getAllProjects();
-    console.log(projects);
-    // projects.forEach((proj) => {
-    //   proj.img_url = proj.img_url.replace("/public", "");
-    // });
     res.render("project.ejs", { projectArray: projects, which: id });
   });
 });

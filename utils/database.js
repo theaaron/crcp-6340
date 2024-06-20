@@ -17,7 +17,6 @@ export async function connect() {
     process.env.MYSQL_PORT +
     "/" +
     process.env.MYSQL_DATABASE;
-  console.log(cString);
 
   pool = mysql
     .createPool(
@@ -34,6 +33,5 @@ export async function connect() {
 
 export async function getAllProjects() {
   const [rows] = await pool.query(`SELECT * FROM projects`);
-  console.log(rows);
   return rows;
 }
