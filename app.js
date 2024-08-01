@@ -6,7 +6,10 @@ import * as db from "./utils/database.js";
 dotenv.config();
 
 const data = ["proj 1", "proj 2", "proj 3"];
+
 let projects = [];
+let contracts = [];
+let mints = [];
 
 const app = express();
 const port = 3000;
@@ -17,13 +20,30 @@ app.use(express.static("public"));
 app.get("/", async (req, res) => {
   await db.connect().then(async () => {
     projects = await db.getAllProjects();
+    contracts = [];
+    mints = [];
+    projects.forEach((item) => {
+      contracts.push(item.contractAddress);
+      mints.push(0);
+    });
     let feat = getRandomInt(projects.length);
-    res.render("index.ejs", { projectArray: projects, featProj: feat });
+    res.render("index.ejs", {
+      projectArray: projects,
+      projects: projects,
+      featProj: feat,
+      mints: mints,
+      contracts: contracts,
+    });
   });
 });
 
 app.get("/projects", (req, res) => {
-  res.render("projects.ejs", { projectArray: projects });
+  res.render("projects.ejs", {
+    contracts: contracts,
+    mints: mints,
+    projectArray: projects,
+    projects: projects,
+  });
 });
 
 app.get("/project/:id", async (req, res) => {
@@ -31,11 +51,20 @@ app.get("/project/:id", async (req, res) => {
   if (id > data.length) {
     throw new Error("No project with that ID");
   }
-  await db.connect().then(async () => {
-    projects = await db.getAllProjects();
-    res.render("project.ejs", { projectArray: projects, which: id });
+  // await db.connect().then(async () => {
+  //   projects = await db.getAllProjects();
+  //   res.render("project.ejs", { projectArray: projects, which: id });
+  // });
+  res.render("project.ejs", {
+    projectArray: projects,
+    which: id,
+    contracts: contracts,
+    mints: mints,
+    projects: projects,
+    project: projects[id - 1],
   });
 });
+
 app.get("/contact", (req, res) => {
   res.render("contact.ejs");
 });
