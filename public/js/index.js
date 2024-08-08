@@ -62,6 +62,15 @@ export async function updateMints() {
     contract.connect(signer);
     let num = await contract.totalSupply();
     newList.push(num.toString());
+    let max = await contract.getMaxSupply();
+    max.toString();
+    let mintTotal = document.querySelector("#mint-total");
+    mintTotal.innerHTML = max;
+    let mintQuant = document.querySelector("#mint-quant-top");
+    if (mintQuant) {
+      mintQuant.innerHTML = contractList.length;
+    }
+    document.querySelector("#mint-quant").innerHTML = contractList.length;
   }
   mintList = [...newList];
 }
