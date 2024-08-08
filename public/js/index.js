@@ -62,7 +62,9 @@ export async function updateMints() {
     contract.connect(signer);
     let num = await contract.totalSupply();
     newList.push(num.toString());
+    console.log("its num:", num.toString());
     let max = await contract.getMaxSupply();
+    console.log("its max: ", max.toString());
     max.toString();
     let mintTotal = document.querySelector("#mint-total");
     mintTotal.innerHTML = max;

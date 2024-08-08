@@ -73,7 +73,6 @@ async function updateMintMessage() {
     supply = supply.toString();
     let max = await contract.getMaxSupply();
     max = max.toString();
-    document.getElementById("#mint-total").innerHTML = max;
     console.log("Total supply is: ", supply);
     console.log("Max supply is: ", max);
     mintMessage = "Tokens are available. Mint yours now.";

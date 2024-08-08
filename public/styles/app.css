@@ -236,6 +236,10 @@ div .mb-20 {
   color: white;
 }
 
+#mint-button {
+  cursor: pointer;
+}
+
 .brand-text {
   color: white;
 }
