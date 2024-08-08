@@ -87,3 +87,4 @@ app.listen(port, () => {
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
+3;

@@ -12,7 +12,7 @@ export let tokenCard = `<div class="card m-3 h-100 fadein">
       <%= edition %> of <%= number %>
     </div>
     <div class="col text-end m-2">
-      <%= price %> ETH
+      <%= price %> MATIC
     </div>
   </div>
 </div>

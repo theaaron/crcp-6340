@@ -19,6 +19,8 @@ let mintMessage = "";
 if (isConnected) {
   await updateMints();
   document.querySelector("#mint-quant").innerHtml = mintList[id];
+  console.log("typeof mintlist[id]: ", typeof mintList[id]);
+  document.querySelector("#mint-quant-top").innerHtml = mintList[id];
   showMints();
   updateMintMessage();
   document.querySelector("#mint-button").addEventListener("click", () => {
@@ -74,6 +76,7 @@ async function updateMintMessage() {
     let max = await contract.getMaxSupply();
     max = max.toString();
     console.log("Total supply is: ", supply);
+    document.querySelector("#mint-quant").innerHtml = supply;
     console.log("Max supply is: ", max);
     mintMessage = "Tokens are available. Mint yours now.";
     let mintButton = document.querySelector("#mint-button");

@@ -45,9 +45,11 @@
   </head>
 
   <body>
-    <%- include ('header'); %>
+
+      <%- include ('header'); %>
+      <div class="p-50"></div>
     <div
-      class="vh-100 d-flex flex-column justify-content-center align-items-center"
+      class= "d-flex flex-column justify-content-center align-items-center m-height-80vh"
     >
       <%- include('selectedProjView', {name: project.project_name, imgUrl:
       project.img_url, price: project.price_eth, featProj: which, desc:
@@ -69,7 +71,7 @@
         <div class="row justify-content-center">
           <div id="token-views"
             class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 text-center justify-content-center">
-            <!-- the client side ejs will render these dynamically from the sript -->
+            <!-- the client side ejs will render these dynamically from the script -->
           </div>
         </div>
       </div>
