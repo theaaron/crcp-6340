@@ -185,6 +185,14 @@ span.stretch {
   background-color: white;
 }
 
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+div .mb-20 {
+  margin-bottom: 20px;
+}
+
 .feat-img {
   width: 100%;
   border-radius: 15px;

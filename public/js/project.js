@@ -115,7 +115,8 @@ async function showMints() {
       price: projectList[id].price_eth,
       metadata: meta,
     };
-    str += "<div class='col-10'>" + ejs.render(tokenCard, data) + "</div>";
+    str +=
+      "<div class='col-10 mb-20'>" + ejs.render(tokenCard, data) + "</div>";
   }
   document.querySelector("#token-views").innerHTML = str;
 }
