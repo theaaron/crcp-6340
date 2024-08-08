@@ -54,9 +54,9 @@
       <%- include('selectedProjView', {name: project.project_name, imgUrl:
       project.img_url, price: project.price_eth, featProj: which, desc:
       project.description}); %>
-      <h3 class="topic">Status: </h3><span id="status">Active - </span><span id="mint-quant"></span><span> of
+      <h3 class="topic">Status: <span id="status">Active - </span><span id="mint-quant"></span><span> of
         <%=project.quantity  %> minted</span></h3>
-      <div id="project-id" class="d-none"><%= project.id %></div>
+      <div id="project-id" class="d-none"><%= project.id %></div> 
     </div>
 
     <section class="justify-content-center">
